@@ -1,0 +1,248 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    /* scroll-behavior: smooth; */
+}
+body,html{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --bg-color: #F5F3EA;
+    --text-color:#FF5858;
+    --para-link-color:#151B31;
+    --family-text:Neuton;
+
+}
+#main{
+    background-color:var(--bg-color);
+}
+#page-1{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+}
+.flex2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+#nav{
+    width: 100%;
+    height: 90px;
+    /* background-color: red; */
+    padding-inline: 100px;
+}
+#nav-1 h1{
+    font-size: 35px;
+    font-family: var(--family-text);
+}
+#nav-1 h1 span{
+    font-size: 40px;
+    font-family: var(--family-text);
+    color: var(--text-color);
+}
+#nav-2{
+    width: 40%;
+    gap: 20px;
+    padding-inline: 50px;
+    /* background-color: rebeccapurple; */
+}
+#nav-2 h6{
+    font-size: 15px;
+    font-weight: 400;
+    transition: all ease .4s;
+    cursor: pointer;
+}
+#nav-3{
+    gap:10px;
+}
+#nav-3 #btn1{
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    transition: all ease .4s;
+    cursor: pointer;
+}
+#nav-3 button{
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease .4s;
+}
+#nav-3 i{
+    transition: all ease .4s;
+    cursor: pointer;
+}
+
+/* center */
+#center{
+    /* background-color: rebeccapurple; */
+    text-align: center;
+    padding-top: 70px;
+    border-bottom: 1px solid black;
+
+}
+#center h2{
+    font-size: 70px;
+    font-family: var(--family-text);
+    color: var(--text-color);
+}
+#center h1{
+    font-size: 70px;
+    font-family: var(--family-text);
+    color: var(--para-link-color);
+}
+#center p{
+    font-size: 21px;
+    color: var(--para-link-color);
+    padding-top: 23px;
+}
+#center img{
+    padding-top: 55px;
+    width: 80%;
+}
+#center img:nth-child(5){
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 18%;
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#center img:nth-child(6){
+    width: 34px;
+    position: absolute;
+    top: 20%;
+    right: 26%;
+    animation-name: updown2;
+    animation-duration: 2s;
+    animation-delay: 2.5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#center img:nth-child(7){
+    width: 20px;
+    position: absolute;
+    top: 10%;
+    left: 36%;
+    animation-name: updown3;
+    animation-duration: 2s;
+    animation-delay: 1.5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#center img:nth-child(8){
+    width: 40px;
+    position: absolute;
+    top: 30%;
+    left: 16%;
+    animation-name: updown3;
+    animation-duration: 2.5s;
+    animation-delay: 2;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#center img:nth-child(9){
+    width: 100px;
+    position: absolute;
+    top: 40%;
+    left: 24%;
+    animation-name: updown3;
+    animation-duration: 2.5s;
+    animation-delay: 2.3;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .8s;
+}
+
+
+/* hover effects */
+#nav-3 i:hover{
+    color: var(--text-color);
+}
+#nav-3 #btn1:hover{
+    color: black;
+}
+#nav-3 #btn2:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+#nav-2 h6:hover{
+    color: var(--text-color);
+}
+
+/* animations */
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-25%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown2 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown3 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown4 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown5 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-55%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
