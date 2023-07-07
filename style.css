@@ -14,16 +14,20 @@ body,html{
     --text-color:#FF5858;
     --para-link-color:#151B31;
     --family-text:Neuton;
+    --sec-text:#8D8D90;
+    --sec-bg:#FFB07B;
 
 }
 #main{
     background-color:var(--bg-color);
+    /* position: relative; */
+    overflow-x: hidden;
 }
 #page-1{
     width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
+    min-height: 100vh;
     position: relative;
+    border-bottom: 1px solid var(--para-link-color);
 }
 .flex{
     display: flex;
@@ -37,33 +41,43 @@ body,html{
 }
 #nav{
     width: 100%;
-    height: 90px;
+    height: 100px;
     /* background-color: red; */
     padding-inline: 100px;
+    gap: 10vw;
 }
-#nav-1 h1{
+
+#nav h1{
     font-size: 35px;
     font-family: var(--family-text);
 }
-#nav-1 h1 span{
+#nav h1 span{
     font-size: 40px;
     font-family: var(--family-text);
     color: var(--text-color);
 }
 #nav-2{
-    width: 40%;
-    gap: 20px;
-    padding-inline: 50px;
+    display: flex;
+    align-items:center ;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
     /* background-color: rebeccapurple; */
 }
 #nav-2 h6{
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 1.2vw;
+    font-family: var(--family-text);
+    color: var(--para-link-color);
+    font-weight: 300;
     transition: all ease .4s;
     cursor: pointer;
+    /* background-color: rebeccapurple; */
 }
 #nav-3{
     gap:10px;
+}
+#nav-3 #menu{
+    display: none;
 }
 #nav-3 #btn1{
     background-color: transparent;
@@ -73,7 +87,7 @@ body,html{
     cursor: pointer;
 }
 #nav-3 button{
-    font-size: 16px;
+    font-size: 1vw;
     background-color: black;
     color: white;
     padding: 12px 15px;
@@ -84,6 +98,7 @@ body,html{
 #nav-3 i{
     transition: all ease .4s;
     cursor: pointer;
+    font-size: 1.1vw;
 }
 
 /* center */
@@ -95,17 +110,17 @@ body,html{
 
 }
 #center h2{
-    font-size: 70px;
+    font-size: 4vw;
     font-family: var(--family-text);
     color: var(--text-color);
 }
 #center h1{
-    font-size: 70px;
+    font-size: 4vw;
     font-family: var(--family-text);
     color: var(--para-link-color);
 }
 #center p{
-    font-size: 21px;
+    font-size: 1vw;
     color: var(--para-link-color);
     padding-top: 23px;
 }
@@ -116,7 +131,7 @@ body,html{
 #center img:nth-child(5){
     width: 20px;
     position: absolute;
-    top: 50%;
+    top: 25%;
     right: 18%;
     animation-name: updown;
     animation-duration: 2s;
@@ -127,7 +142,7 @@ body,html{
 #center img:nth-child(6){
     width: 34px;
     position: absolute;
-    top: 20%;
+    top: 15%;
     right: 26%;
     animation-name: updown2;
     animation-duration: 2s;
@@ -151,11 +166,11 @@ body,html{
 #center img:nth-child(8){
     width: 40px;
     position: absolute;
-    top: 30%;
+    top: 16%;
     left: 16%;
     animation-name: updown3;
     animation-duration: 2.5s;
-    animation-delay: 2;
+    animation-delay: 2.2;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     transition: all ease .7s;
@@ -163,16 +178,102 @@ body,html{
 #center img:nth-child(9){
     width: 100px;
     position: absolute;
-    top: 40%;
+    top: 25%;
     left: 24%;
     animation-name: updown3;
     animation-duration: 2.5s;
-    animation-delay: 2.3;
+    animation-delay: 1.3;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     transition: all ease .8s;
 }
 
+/* ********** Page -2************** */
+
+#page-2{
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 100px;
+    position: relative;
+    /* background-color: rebeccapurple; */
+    /* margin-top: 600px; */
+    /* text-align: center; */
+    /* z-index: -1; */
+}
+#page-2 h2{
+    text-align: center;
+    font-size: 3vw;
+    font-family: var(--family-text);  
+}
+#page-2 p{
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 600;
+    width: 40%;
+    z-index: 2;
+    margin:auto;    
+    padding-top: 15px;
+    color: var(--sec-text);
+}
+#inner-container{
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 80px;
+    position: relative;
+    background-color: var(--bg-color);
+}
+.elem{
+   width: 50vh;
+   height: 700px;
+   /* background-color: var(--sec-bg); */
+   position: relative;
+   padding: 5px;
+   border-radius: 5px;
+   transition: all ease .6s;
+}
+.elem #overlay{
+    width: 100%;
+    height: 100%;
+    background-color:transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#overlay i{
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 10px;
+    background-color:var(--para-link-color);
+    color: var(--bg-color);
+    display: none;
+}
+.elem img{
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
+    /* padding-bottom: 40px; */
+    border-radius: 5px;
+    border: 2px solid black;
+    transition: all ease .6s;
+}
+.elem h1{
+    position: absolute;
+    bottom: -2.3%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: var(--family-text);
+    font-size: 45px;
+}
 
 /* hover effects */
 #nav-3 i:hover{
@@ -190,7 +291,134 @@ body,html{
     color: var(--text-color);
 }
 
+#inner-container .elem:hover{
+    background-color: var(--sec-bg);
+    color: white;
+    
+}
+#inner-container .elem:hover img{
+    filter: grayscale(2);
+}
+#inner-container .elem:hover #overlay i{
+    display: block;
+}
+
+
+
+/* medai quesries */
+@media (max-width:600px) {
+    #nav{
+        width: 100%;
+        height: 100px;
+        justify-content: space-between;
+        padding-inline: 3vw;
+    }
+    #nav-2{
+        display: none;
+    }
+    #nav-3 i{
+        font-size: 4vw;
+        margin-left: 2vw;
+    }
+    #nav-3 #btn1,#btn2{
+        display: none;
+    }
+    #nav h1{
+        font-size: 5vw;
+        font-family: var(--family-text);
+    }
+    #nav h1 span{
+        font-size: 6vw;
+        font-family: var(--family-text);
+        color: var(--text-color);
+    }
+    #center{
+        text-align: center;
+        padding-top: 1vw;
+        border-bottom: 1px solid black;
+    }
+    #center h2{
+        font-size: 8vw;
+    }
+    #center h1{
+        font-size: 8vw;
+    }
+    #center p{
+        font-size: 3vw;
+        padding-bottom: 10vw;
+    }
+    #center #first{
+        width: 100vw;
+        padding: 0 2vw;
+    }
+    #center img:nth-child(5){
+        width: 3vw;
+        position: absolute;
+        top: 45vw;
+        left: 80vw;
+    }
+    #center img:nth-child(7){
+        width: 3vw;
+        position: absolute;
+        top: 10vw;
+        left: 35vw;
+    }
+    #center img:nth-child(8){
+        width: 5vw;
+        position: absolute;
+        top: 19vw;
+        left: 15vw;
+    }
+    #center img:nth-child(6){
+        width: 5vw;
+        position: absolute;
+        top: 10vw;
+        left: 75vw;
+    }
+    
+    #center img:nth-child(9){
+        width: 9vw;
+        position: absolute;
+        top: 39vw;
+        left: 20vw;
+    }
+
+    /* part-2 */
+    #page-2{
+        padding: 10vw 10vw;
+        position: relative;
+    }
+    #page-2 h2{
+        font-size: 7vw;
+        width: 60vw;
+        margin: auto;
+    }
+    #page-2 p{
+        font-size: 2.6vw;
+        width: 60vw;
+        margin: auto;
+        font-weight: 300;
+    }
+    .elem{
+        width: 100vw;
+        height: 83vw;
+    }
+    .elem h1{
+        font-size: 5vw;
+    }
+    .elem img{
+        width: 100%;
+        object-fit: cover;
+        object-position:center;
+        /* padding-bottom: 40px; */
+        border-radius: 5px;
+        border: 2px solid black;
+        transition: all ease .6s;
+    }
+
+}
 /* animations */
+
 @keyframes updown {
     0%{
         transform: translateY(0);
