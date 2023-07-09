@@ -34,9 +34,9 @@ tz2.from("#page-2 h2,#page-2 p",{
     opacity:0,
     stagger:.25
 })
-.from("#inner-container",{
+.from("#inner-container .elem",{
     scrollTrigger:{
-        trigger:"#page-2 h2,#page-2 p",
+        trigger:"#inner-container .elem",
         scroller:"body",
         start:"top 40%",
         end:"top 60%",
@@ -49,57 +49,63 @@ tz2.from("#page-2 h2,#page-2 p",{
 })
 
 let tl3 = gsap.timeline()
-.from('#bar',{
+.from('#bar-menu ',{
 scrollTrigger:{
-    trigger:"#page-2 #bar",
+    trigger:"#bar-menu",
     // trigger:"#bar h1,#bar p",
     scroller:"body",
-    start:"top 40%",
-    end:"top 60%",
+    start:"top 50%",
+    end:"top 80%",
     // markers:true,
     scrub:2
 },
-    y:60,
+    y:50,
     opacity:0,
-    stagger:.20
+    duration:1,
+    stagger:.2
 })
-.to('#bar>#left #left #fill1',{
-    scrollTrigger:{
-        trigger:'#left',
-        scroller:'body',
-        start:"top 30%",
-        start:"top 60%",
-        // markers:true,
-        scrub:3
-    },
-    width:'95%',
-    backgroundColor:"#151B31",
+tl3.from('.fill',{
+    x:-100,
+    // innerWidth:'100%',
+    duration:2,
     opacity:0,
+    stagger:.21,
+    scrollTrigger:{
+        trigger:'.fill',
+        scroller:'body',
+        star:'top 30%',
+        end:'top 80%',
+        // markers:true,
+        scrub:5
+
+    }
+})
+
+tl3.from("#page-3 h1",{
+    scrollTrigger:{
+    trigger:'#page-3 h1',
+    scroller:'body',
+    start:'top 20%',
+    end:'top 30%',
+    // markers:true,
+    scrub:2
+    },
+    y:30,
+    opacity:0,
+    durtion:1,
     stagger:.10
 })
-.from("#page-3 h1",{
+tl3.from(".card",{
     scrollTrigger:{
-        trigger:'#page-3 h1',
-        scroller:"body",
+        trigger:'.card',
+        scroller:'body',
         start:"top 30%",
-        start:"top 50%",
+        end:"top 100%",
         // markers:true,
-        scrub:3
+        scrub:5
     },
-    y:50,
-    stagger:.24,
+    y:30,
     opacity:0,
-})
-.from("#wrapper-2 .card",{
-    scrollTrigger:{
-    trigger:'#wrapper-2 .card',
-    scroller:"body",
-    start:"top 15%",
-    start:"top 100%",
-    // markers:true,
-    scrub:1
-    },
-    y:10,
-    opacity:0,
-    // stagger:.15
+    stagger:0.25,
+    duration:1.2
 })
