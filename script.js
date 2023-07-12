@@ -41,11 +41,11 @@ tz2.from("#page-2 h2,#page-2 p",{
         start:"top 40%",
         end:"top 60%",
         // markers:true,
-        scrub:2
+        scrub:1
     },
-    y:50,
+    y:100,
     opacity:0,
-    stagger:.25
+    // stagger:0.5
 })
 
 let tl3 = gsap.timeline()
@@ -108,4 +108,64 @@ tl3.from(".card",{
     opacity:0,
     stagger:0.25,
     duration:1.2
+})
+
+// page-4
+tl3.from('#page-4 h2',{
+    x:-1000,
+    y:150,
+    duration:1,
+    opacity:0,
+    stagger:.25,
+    scrollTrigger:{
+        trigger:'#page-4 h2',
+        scroller:'body',
+        start:"top 20%",
+        end:"top 70%",
+        scrub:5
+    }
+})
+tl3.from('#page-4 p',{
+    x:1000,
+    y:150,
+    duration:1,
+    // scale:0,
+    opacity:0,
+    stagger:.25,
+    color:"#FF5858",
+    scrollTrigger:{
+        trigger:'#page-4 p',
+        scroller:'body',
+        start:"top 50%",
+        end:"top 70%",
+        scrub:4
+    }
+})
+
+tl3.from('#wrapper-3 ',{
+    y:200,
+    duration:1,
+    opacity:0,
+    stagger:.2,
+    scrollTrigger:{
+        trigger:'#wrapper-3 .card-3',
+        scroller:'body',
+        start:"top 50%",
+        end:"top 90%",
+        scrub:3,
+        // markers:true
+    }
+})
+tl3.from('#page-5',{
+    y:200,
+    dutation:1.2,
+    opacity:0,
+    scrollTrigger:{
+        trigger:'#page-5',
+        scroller:'body',
+        // markers:true,
+        start:'top 50%',
+        end:'top 30%',
+        scrub:4
+    }
 })
