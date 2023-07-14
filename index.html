@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wednesday-128</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
 </head>
@@ -11,11 +12,30 @@
     <div id="main">
     <!-- main start -->
 
-    <!-- page1 -->
-    <div id="page-1">
+    <!-- card -->
+    <!-- <div id="card"> -->
+        <div id="shop-card">
+            <div id="c-text">
+                <h1>Your Cart</h1>
+            </div>  
+            <p>No items found.</p>          
+        <!-- </div> -->
+    </div>
+        <!-- page1 -->
+    <div id="page-1"> 
+        <!-- slide menu -->
+        <div id="slide-menu">  
+            <h1><span>W</span>ednesday</h1>
+            <div id="nav-2" class="flex2">
+                <h6>Demons</h6>
+                <h6>Company</h6>
+                <h6>Pricing</h6>
+                <h6>Contact us</h6>
+                <h6>All pages</h6>
+            </div>       
+        </div>
         <div id="nav" class="flex">
                 <h1><span>W</span>ednesday</h1>
-
             <div id="nav-2" class="flex2">
                 <h6>Demons</h6>
                 <h6>Company</h6>
@@ -24,10 +44,12 @@
                 <h6>All pages</h6>
             </div>
             <div id="nav-3" class="flex2">
-                <i class="ri-shopping-cart-fill"></i>
-                <i id="menu" class="ri-menu-fold-fill"></i>
+                <h3><i class="ri-shopping-cart-fill"></i></h3>
+                <h4><i id="menu" class="ri-menu-fold-fill"></i></h4>
                 <button id="btn1">Sign in</button> 
-                <button id="btn2">Sign Up</button> 
+                <!-- <button id="btn2">Sign Up</button>  -->
+                <a href="./signup.html" id="btn2">Sign Up</a>
+
             </div>
         </div>
 
@@ -288,7 +310,7 @@
 
             <div class="card-3">
                 <img src="https://assets.website-files.com/63be6b95d526b7b72dcb1d66/63dce1739589a8777beb7aa8_Blog%20(3).webp" alt="">
-                <h3>BLog</h3>
+                <h3>Blog</h3>
                 <div class="overlay-3">
                     <i class="ri-eye-fill"></i>
                 </div>
@@ -370,6 +392,7 @@
     </div>
 
     <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./script.js"></script>

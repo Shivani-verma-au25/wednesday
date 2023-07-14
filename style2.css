@@ -1,0 +1,646 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+:root{
+    --bg-color: #F5F3EA;
+    --text-color:#FF5858;
+    --para-link-color:#151B31;
+    --family-text:Neuton;
+    --sec-text:#6a6a6b;
+    --sec-bg:#FFB07B;
+    --icon-color1:#BDF0DF;
+    --default-font:gilroy;
+    --default-bg:white;
+
+}
+#main{
+    background-color:var(--default-bd);
+    /* position: relative; */
+    overflow-x: hidden;
+}
+#signup{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    /* border-bottom: 1px solid var(--para-link-color); */
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+}
+.flex2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+#nav{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    padding-inline: 100px;
+    gap: 10vw;
+}
+
+#nav h1{
+    font-size: 35px;
+    font-family: var(--family-text);
+}
+#nav h1 span{
+    font-size: 40px;
+    font-family: var(--family-text);
+    color: var(--text-color);
+}
+#nav-2{
+    display: flex;
+    align-items:center ;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    font-family: gilroy;
+
+    /* background-color: rebeccapurple; */
+}
+#nav-2 h6{
+    font-size: 1.2vw;
+    /* font-family: var(--family-text); */
+    color: var(--para-link-color);
+    font-weight: 500;
+    transition: all ease .4s;
+    cursor: pointer;
+    /* background-color: rebeccapurple; */
+}
+#nav-3{
+    gap:10px;
+}
+#nav-3 #menu{
+    display: none;
+}
+#nav-3 #btn1{
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    transition: all ease .4s;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#nav-3 #btn2{
+    font-size: 1.2vw;
+    background-color: black;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease .4s;
+    cursor: pointer;
+    font-family: gilroy;
+}
+#nav-3 button{
+    font-size: 1vw;
+    background-color: black;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    transition: all ease .4s;
+}
+#nav-3 i{
+    transition: all ease .4s;
+    cursor: pointer;
+    font-size: 1.1vw;
+}
+
+
+/* center */
+#signup-center{
+    /* background-color: rebeccapurple; */
+    text-align: center;
+    padding-top: 1px;
+}
+#signup-center h2{
+    font-size: 5vw;
+    font-family: var(--family-text);
+    color: var(--para-link-color);
+}
+#signup-center p{
+    font-size: vw;
+    color: var(--sec-text);
+    padding-top: 1vw;
+    padding-inline: 30vw;
+    margin-bottom: 2vw;
+    font-family: var(--default-font);
+    font-weight: 400;
+}
+#signup-center img:nth-child(3){
+    width: 40px;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    animation-name: updown;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#signup-center img:nth-child(4){
+    width: 25px;
+    position: absolute;
+    top: 25%;
+    right:24%;
+    animation-name: updown2;
+    animation-duration: 2s;
+    animation-delay: 2.5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#signup-center img:nth-child(5){
+    width: 40px;
+    position: absolute;
+    top: 13%;
+    left: 26%;
+    animation-name: updown3;
+    animation-duration: 2s;
+    animation-delay: 1.5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+#signup-center img:nth-child(6){
+    width: 50px;
+    position: absolute;
+    top: 26%;
+    left: 16%;
+    animation-name: updown3;
+    animation-duration: 2.5s;
+    animation-delay: 2.2;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all ease .7s;
+}
+
+/* form container */
+#signup-form-container{
+    width: 35vw;
+    height: 23vw;
+    background-color: var(--text-color);
+    margin: auto;
+    position: relative;
+    border-radius: .5vw;
+    border: .1vw solid var(--para-link-color);
+    box-shadow: .2vw .2vw var(--para-link-color);
+}
+#signup-form-container>img{
+    height: 10vw;
+    position: absolute;
+    left: 75%;
+}
+form{
+    padding-top: 4vw;
+    padding-left: 5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.2vw;
+}
+form input{
+    z-index: 1;
+    width: 26vw;
+    height: 2.5vw;
+    border-radius: .4vw;
+    outline: none;
+    border: .1vw solid var(--para-link-color);
+}
+form input[type='text']{
+    padding-left: 1vw;
+    font-size: 1.1vw;
+}
+form button{
+    font-size: 1vw;
+    font-weight: 600;
+    padding: .6vw 1.3vw;
+    background-color: var(--para-link-color);
+    color: var(--bg-color);
+    border-radius: .4vw;
+    border: none;
+    cursor: pointer;
+    transition: all ease .4s;
+}
+
+#signup-center #login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-family: var(--default-font);
+    margin-top: 1.3vw;
+}
+#login span{
+    color: var(--text-color);
+    margin-left: .4vw;
+    cursor: pointer;
+    transition:  all ease .3s;
+}
+
+/* *********** Footer *************** */
+footer{
+    width: 100vw;
+    height: 30vw;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    margin-top: 10vw;
+}
+footer #top{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 12vw;
+    margin-bottom: 4vh;
+    font-family: var(--default-font);    
+}
+footer h1{
+    font-size: 2.3vw;
+}
+footer h1 span{
+    font-size: 3.1vw;
+    font-family: var(--family-text);
+    color: var(--text-color);
+}
+#f-left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4vw;
+    
+}
+#f-left h6{
+    font-size: 1.8vw;
+    font-weight: 500;
+    cursor: pointer;
+    /* margin-bottom: 6vh; */
+}
+#f-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+#f-right i{
+    cursor: pointer;
+    font-size: 1.4vw;
+    /* background-color: var(--text-color); */
+    color: var(--bg-color);
+    padding: .2vw;
+    border-radius: .2vw;
+    border: 1px solid var(--para-link-color);
+    border-right:.2vw solid var(--para-link-color) ;
+    border-bottom:.2vw solid var(--para-link-color) ;
+}
+#f-right i:nth-child(1){
+    background-color: var(--icon-color1);
+    transition: all ease .5s;
+}
+#f-right i:nth-child(2){
+    background-color: var(--sec-bg);
+    transition: all ease .5s;
+}
+#f-right i:nth-child(3){
+    background-color: var(--text-color);
+    transition: all ease .5s;
+}
+footer p{
+    font-size: 1.2vw;
+    padding-inline: 30vw;
+    text-align: center;
+    color: var(--sec-text);
+    padding-bottom: 4vh;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+footer p span{
+    color: var(--text-color);
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+#sub-footer{
+    width: 80vw;
+    height: 30vh;
+    background-color: var(--icon-color1);
+    position: absolute;
+    bottom: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:.1vw solid var(--para-link-color) ;
+    border-radius: .3vw;
+    box-shadow: .2vw .2vw var(--para-link-color);
+}
+#sub-footer h1{
+    font-size: 3.3vw;
+    color: var(--para-link-color);
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+}
+#sub-footer h1 span img{
+    height:2.5vw;
+}
+#f-search{
+    width: 100%;
+    height: 40%;
+    /* background-color: rebeccapurple; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+#f-search input{
+    width: 20vw;
+    height: 2.5vw;
+    border: .1vw solid black;
+    border-radius: .5vw;
+    /* font-size: 1vw; */
+    cursor: pointer;
+
+}
+#f-search input[type="text"]{
+    font-size: 1vw;
+    padding-left: 1vw;
+}
+#f-search #btn10{
+    font-size: 1.1vw;
+    padding: .5vw 2vw;
+    display: inline-block;
+    width: 7vw;
+    border-radius: .4vw;
+    background-color: #FF5858;
+    color: wheat;
+    font-weight: 400;
+    border: none;
+    transition: all ease .5s;
+    cursor: pointer;
+
+}
+
+/* ********Media queries ************* */
+@media(max-width:600px) {
+    #nav{
+        width: 100vw;
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+    #nav-2{
+        display: none;
+    }
+    #nav-3 button,a{
+        display: none;
+    }
+    #nav-3 i{
+        display: initial;
+        font-size: 5vw;
+    }
+    #nav-3 #menu{
+        display: initial;
+        font-size: 5vw;
+    }
+    #signup-center{
+        width: 100vw;
+        margin-top: 2vw;
+    }
+    #signup-center h2{
+        font-size: 7vw;
+        margin-top: 2vw;
+    }
+    #signup-center p{
+        font-size: 2.3vw;
+        width: 100vw;
+        padding: 0 24vw;
+        line-height: 3.2vw;
+        margin-top: 3vw;
+    }
+    #signup-form-container{
+        margin-top: 3vw;
+        width: 90vw;
+        height: 45vw;
+        padding-top: 5vh;
+    }
+    form input{
+        width: 60vw;
+        height: 5vh;
+        margin: auto;
+    }
+    form input[type='text']{
+        font-size: 2vw;
+    }
+    form button{
+        margin-left: 12.4vw;
+        font-size: 2vw;
+        padding: 1.8vw 6vw;
+    }
+    #signup-form-container img{
+        height: 22vw;
+    }
+    #signup-center #login{
+        margin-top: 5vw;
+    }
+    footer{
+        margin-top: 35vw;
+    }
+    #sub-footer{
+        width: 90vw;
+        height: 30vw;
+        margin-bottom: 5vw;
+    }
+    #sub-footer h1{
+        font-size: 5.5vw;
+    }
+    #f-search {
+        width: 100vw;
+    }
+    #f-search input{
+        width: 40vw;
+        height: 4.5vh;
+    }
+    #f-search input[type='text']{
+        font-size: 2.3vw;
+    }
+    #f-search #btn10{
+        width: 10vw;
+        font-size: 2vw;
+    }
+    #top{
+        flex-direction: column;
+        gap: 2vw;
+        margin-top: 2vw;
+    }
+    #top h1{
+        font-size: 4.3vw;
+        margin-top: 20vw;
+    }
+    #top h1 span{
+        font-size: 6vw;
+        margin-top: 2vw;
+    }
+    #f-left {
+        /* width: 100vw;background-color: rebeccapurple; */
+        height: 6vh;
+    }
+    #f-left h6{
+        font-size: 3.4vw
+    }
+    #f-right{
+        width: 100vw;
+        height: 6vh;
+        /* background-color: rebeccapurple; */
+    }
+    #f-right i{
+        font-size: 4vw;
+        box-shadow: .4vw .4vw var(--para-link-color);
+        border-radius: .4vw;
+    }    
+    footer p {
+        font-size: 3.2vw;
+        padding-inline: 9vw;
+        width: 100vw;
+    }
+}
+
+/* animations */
+
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-25%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown2 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown3 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown4 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(35%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes updown5 {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-55%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+/* hover effects */
+#nav-3 i:hover{
+    color: var(--text-color);
+}
+#nav-3 #btn1:hover{
+    color: black;
+}
+#nav-3 #btn2:hover{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+#nav-2 h6:hover{
+    color: var(--text-color);
+}
+
+#inner-container .elem:hover,.card-3:hover{
+    background-color: var(--sec-bg);
+    color: white;
+    
+}
+#inner-container .elem:hover img,.card-3:hover img{
+    filter: grayscale(2);
+}
+#inner-container .elem:hover #overlay i,.card-3:hover #overlay i{
+    display: block;
+}
+.card-3:hover .overlay-3 i{
+    display: block;
+}
+#page-5 #p-5-p:hover{
+    background-color: var(--para-link-color);
+    border-color: var(--text-color);
+}
+#f-right i:hover{
+    background-color: var(--sec-bg) ;
+} 
+#f-right i:nth-child(2):hover{
+    background-color: var(--icon-color1);
+}
+#f-right i:nth-child(3):hover{
+    background-color: var(--sec-bg);
+}
+footer #sub-footer #btn10:hover{
+    background-color: transparent;
+    color: var(--text-color);
+    border: .1vw solid var(--text-color);
+    border-color: var(--text-color);
+}
+#f-left h6:hover{
+    color: var(--text-color);
+}
+footer>p span:hover{
+    color: var(--para-link-color);
+}
+form button:hover{
+    background-color: var(--bg-color);
+    color: var(--para-link-color);
+    font-weight: 100;
+    border: .1vw solid var(--para-link-color);
+}
+#signup-center>p span:hover{
+    color: var(--para-link-color);
+}
