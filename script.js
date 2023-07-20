@@ -36,7 +36,7 @@ ScrollTrigger.refresh();
 
 // gsap or scrollTrigger
 gsap.to("#nav h1,#nav h6,#nav h4,#nav h3,#nav #btn1,#nav #btn2",{
-    y:20,
+    y:10,
     duration:.1,
     stagger:.2,
     opcity:0
@@ -243,4 +243,30 @@ menu.addEventListener('click',function(e){
     }
 })
 
-// <i class="ri-close-circle-fill"></i>
+// cursor
+let cur = document.querySelector('#cursor')
+let main = document.querySelector('#main')
+
+main.addEventListener('mousemove',function(dets){
+    // console.log(dets.x);
+    cur.style.left = `${dets.x}px`
+    cur.style.top = `${dets.y}px`
+})
+
+
+// nav hover effect
+// console.log(nav);
+let nav = document.querySelectorAll('#nav #nav-2 h6')
+nav.forEach(function(item){
+    item.addEventListener('mouseenter',function(){
+        item.style.color = '#FF5858'
+    })
+    item.addEventListener('mouseleave',function(){
+        item.style.color = '#151B31'
+    })
+})
+// nav.addEventListener('mouseenter',function(e){
+//     nav.style.color = 'yellow'
+// })
+
+
